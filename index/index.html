@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>CHEQUE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="./../css/default.css" rel="stylesheet" />
+
+    <h1><strong>CHEQUE</strong></h1><br><hr>
+
+    <script>
+      var a = ['','one ','two ','three ','four ', 'five ','six ','seven ','eight ','nine ','ten ','eleven ','twelve ','thirteen ','fourteen ','fifteen ','sixteen ','seventeen ','eighteen ','nineteen '];
+      var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','ninety'];
+
+      function inWords (num) {
+        if ((num = num.toString()).length > 9) return 'overflow';
+        n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+          if (!n) return; var str = '';
+        str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'crore ' : '';
+        str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'lakh ' : '';
+        str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'thousand ' : '';
+        str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'hundred ' : '';
+        str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only ' : '';
+        return str;
+      }
+
+      function formFunction() {
+        document. getElementById("display").style.display="block";
+        document.getElementById("ldate").innerHTML = document.getElementById("fdate").value;
+        document.getElementById("name").innerHTML = document.getElementById("fname").value;
+        document.getElementById('lamount').innerHTML = inWords(document.getElementById('amount').value);
+        document.getElementById("lacc").innerHTML = document.getElementById("acc").value;
+
+        // new SpeechSynthesisUtterance object
+        let utter = new SpeechSynthesisUtterance();
+        utter.lang = 'en-US';
+        utter.text = "Amount is" + inWords(document.getElementById('amount').value);
+        utter.volume = 0.5;
+
+        // event after text has been spoken
+        utter.onend = function() {
+          alert('Speech has finished');
+        }
+
+      // speak
+        window.speechSynthesis.speak(utter);
+      }
+    </script>
+
+    <style>
+    body {
+      background-image: url('../images/images.jpeg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    hr {
+      border-color:black;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <div class="left-column"> 
+        <form>
+          <label for="fname">PAY TO:</label>
+          <input type="text" id="fname">
+          <br><br>
+          <label for="lname">AMOUNT(figures):</label>
+          <input type="number" id="amount">
+          <br><br>
+        </form>
+      </div>
+    <div class="right-column">
+        <form>
+          <label for="fdate">DATE:</label>
+          <input type="date" id="fdate">
+          <br><br>
+          <label for="lname">ACCOUNT NO. :</label>
+          <input type="number" id="acc">
+          <br>
+        </form>
+    </div>
+  </div>
+
+  <button type="button" onclick="formFunction()">SUBMIT</button><br><br>
+  <hr>
+
+  <div id="display" style="display: none;">
+    <h4>DATE: </h2> <p id="ldate" style="font-weight: 1000;"></p>
+    <h4>NAME: </h2> <p id="name" style="font-weight: 1000;"></p>
+    <h4>AMOUNT(words): </h2> <p id="lamount" style="font-weight: 1000;"></p>
+    <h4>ACCOUNT NO. : </h2> <p id="lacc" style="font-weight: 1000;"></p>
+  </div>
+  <body/>
+</html>
