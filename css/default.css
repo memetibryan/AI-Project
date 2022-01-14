@@ -10,4 +10,13 @@
   float:right; 
   width: 50% //if you want to split exactly half of the page 
 } 
-//width is according to how much left-column you want, how much right-column you want 
+
+body {
+  background-image: url('../images/images.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+hr {
+  border-color:black;
+} 
