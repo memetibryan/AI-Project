@@ -4,11 +4,13 @@
 } 
 .left-column{ 
   float:left; 
-  width: 50% //if you want to split exactly half of the page 
+  width: 50%;
+  padding-left: 5%;
 } 
 .right-column{ 
   float:right; 
-  width: 50% //if you want to split exactly half of the page 
+  width: 50%;
+  padding-left: 5%;
 } 
 
 body {
@@ -19,4 +21,25 @@ body {
 }
 hr {
   border-color:black;
-} 
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+}
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
