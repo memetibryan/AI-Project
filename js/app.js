@@ -24,7 +24,7 @@ var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','
     let utter = new SpeechSynthesisUtterance();
     utter.lang = 'en-US';
     utter.text = "The Amount is" + inWords(document.getElementById('amount').value);
-    utter.volume = 0.5;
+    utter.volume = 1.5;
 
   // event after text has been spoken
     utter.onend = function() {

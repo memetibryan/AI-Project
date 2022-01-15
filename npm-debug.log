@@ -1,0 +1,56 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '–g', 'pg' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData –g
+8 silly fetchPackageMetaData pg
+9 silly fetchOtherPackageData –g
+10 silly cache add args [ '–g', null ]
+11 verbose cache add spec –g
+12 silly fetchNamedPackageData pg
+13 silly mapToRegistry name pg
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry uri https://registry.npmjs.org/pg
+17 silly cache add parsed spec Result {
+17 silly cache add   raw: '–g',
+17 silly cache add   scope: null,
+17 silly cache add   name: null,
+17 silly cache add   rawSpec: '–g',
+17 silly cache add   spec: '/home/memetibryan/Desktop/Projects/AI Project/–g',
+17 silly cache add   type: 'local' }
+18 verbose request uri https://registry.npmjs.org/pg
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 4:24:05 PM
+21 verbose request id cfe9c352c1f341e0
+22 http request GET https://registry.npmjs.org/pg
+23 error addLocal Could not install /home/memetibryan/Desktop/Projects/AI Project/–g
+24 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/home/memetibryan/Desktop/Projects/AI Project/–g'
+24 silly fetchPackageMetaData  error for –g { Error: ENOENT: no such file or directory, open '/home/memetibryan/Desktop/Projects/AI Project/–g'
+24 silly fetchPackageMetaData   errno: -2,
+24 silly fetchPackageMetaData   code: 'ENOENT',
+24 silly fetchPackageMetaData   syscall: 'open',
+24 silly fetchPackageMetaData   path: '/home/memetibryan/Desktop/Projects/AI Project/–g' }
+25 verbose stack TypeError: The header content contains invalid characters
+25 verbose stack     at validateHeader (_http_outgoing.js:494:11)
+25 verbose stack     at ClientRequest.setHeader (_http_outgoing.js:498:3)
+25 verbose stack     at new ClientRequest (_http_client.js:173:14)
+25 verbose stack     at Object.request (http.js:38:10)
+25 verbose stack     at Object.request (https.js:239:15)
+25 verbose stack     at Request.start (/usr/share/npm/node_modules/request/request.js:793:30)
+25 verbose stack     at Request.end (/usr/share/npm/node_modules/request/request.js:1400:10)
+25 verbose stack     at end (/usr/share/npm/node_modules/request/request.js:564:14)
+25 verbose stack     at Immediate._onImmediate (/usr/share/npm/node_modules/request/request.js:578:7)
+25 verbose stack     at runCallback (timers.js:794:20)
+26 verbose cwd /home/memetibryan/Desktop/Projects/AI Project
+27 error Linux 5.4.0-89-generic
+28 error argv "/usr/bin/node" "/usr/bin/npm" "install" "–g" "pg"
+29 error node v8.10.0
+30 error npm  v3.5.2
+31 error The header content contains invalid characters
+32 error If you need help, you may report this error at:
+32 error     <https://github.com/npm/npm/issues>
+33 verbose exit [ 1, true ]
