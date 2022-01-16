@@ -1,6 +1,6 @@
 const {Client} = require('pg');
 const client = new Client({
-  user: "memetibryan",
+  user: "postgres",
   password: "postgres",
   host: "memetibryan",
   port: 5432,
@@ -14,3 +14,7 @@ client.connect()
 .then(results => console.table(results.rows))
 .catch(e => console.log)
 .finally(() => client.end())
+
+function saveData(){
+  alert("SAVED TO DATABASE");
+}

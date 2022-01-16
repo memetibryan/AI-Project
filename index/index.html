@@ -15,8 +15,17 @@
     <!-- external files linking -->
     <link href="./../css/default.css" rel="stylesheet" />
     <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
 
-    <h1><strong>CHEQUE (Brieme Bank)</strong></h1><hr>
+    <div id="main">
+      <div class="left-column">
+        <img src="../images/logo.png" height="140px">
+      </div>
+      <div class="right-column">
+        <h1><strong>CHEQUE</strong></h1><p>Holdings Limited</p>
+      </div>
+    </div>
+    <hr>
   </head>
 
   <body>
@@ -31,7 +40,7 @@
           <br><br>
         </form>
       </div>
-    <div class="right-column">
+      <div class="right-column">
         <form>
           <label for="fdate">DATE:</label>
           <input type="date" required="Yes" id="fdate">
@@ -40,8 +49,8 @@
           <input type="number" required="Yes" id="acc">
           <br>
         </form>
+      </div>
     </div>
-  </div>
 
   <button type="button" onclick="formFunction()">SUBMIT</button>
   <hr>
@@ -51,6 +60,8 @@
     <h4>NAME: <p id="name" style="font-weight: 1000;"></p></h2>
     <h4>AMOUNT(words): <p id="lamount" style="font-weight: 1000;"></p></h2>
     <h4>ACCOUNT NO. : <p id="lacc" style="font-weight: 1000;"></p></h2>
+
+      <button type="button" onclick="saveData()">SAVE INFORMATION</button><br><br>
   </div>
   <body/>
 </html>
