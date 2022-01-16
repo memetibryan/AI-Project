@@ -27,9 +27,9 @@ var b = ['', '', 'twenty','thirty','forty','fifty', 'sixty','seventy','eighty','
     utter.volume = 1.5;
 
   // event after text has been spoken
-    utter.onend = function() {
-    alert('CHEQUE WRITTEN SUCCESSFULLY');
-  }
+  //   utter.onend = function() {
+  //   alert('CHEQUE WRITTEN SUCCESSFULLY');
+  // }
 
   // speak
     window.speechSynthesis.speak(utter);
