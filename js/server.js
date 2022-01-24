@@ -2,7 +2,10 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 3007;
+
+app.use(express.static(__dirname + '../images'));
+app.use(express.static(__dirname + '../js'));
 
 // sendFile will go here
 app.get('/', function(req, res) {

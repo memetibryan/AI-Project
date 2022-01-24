@@ -18,7 +18,7 @@ const client = new Client({
 //   client.end;
 // })
 
-function saveData(){
+function saveData(){ 
   client.connect()
 
   .then(() => console.log("connected successfully"))
