@@ -22,7 +22,7 @@ function saveData(){
   client.connect()
 
   .then(() => console.log("connected successfully"))
-  // .then(() => client.query("insert into data values ($1,$2,$3,$4)", ['1990-09-23','boni',4325,6789867]))
+  .then(() => client.query("insert into data values ($1,$2,$3,$4)", [document.getElementById("ldate").value, document.getElementById("name").value, document.getElementById("lamount").value, document.getElementById("lacc").value]))
   .then(() => client.query("select * from data"))
   .then(results => console.table(results.rows))
   .catch(e => console.log)
